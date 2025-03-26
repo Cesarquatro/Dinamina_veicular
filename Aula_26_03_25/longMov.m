@@ -8,12 +8,14 @@ Af = 2.04;          % [m²] Área Frontal
 rho = 1.2923;       % [kg / m³] Densidade do Ar
 Cd = 0.33;          % [] Coeficiente de arrasto aerodinamico
 
-if t < 10
-    theta = deg2rad(3);
-else
-    % Condições de operação
-    theta = 0; % [rad] Inclinação da Via = 2º
-end
+% if t < 10
+%     theta = deg2rad(3);
+% else
+%     % Condições de operação
+%     theta = 0; % [rad] Inclinação da Via = 2º
+% end
+
+theta = 0; % [rad] Inclinação da Via = 2º
 
 % Eq. Resistencia ao movimento
 

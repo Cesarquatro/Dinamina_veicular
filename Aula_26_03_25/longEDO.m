@@ -1,12 +1,13 @@
 close all; clc; clear
 %% 
 
-tsim = [0 200];
-V0 = 80 /3.6;
+tsim = [0 500];
+V0 = 0 /3.6;
+Fxt = 900;
 
 
 % @ fala quais são as constantes, o testo ele considera como cte
-[t, vms] = ode45(@(t, Vms)  longMov(t, Vms, 0), tsim, V0);
+[t, vms] = ode45(@(t, Vms)  longMov(t, Vms, Fxt), tsim, V0);
 
 
 figure()
