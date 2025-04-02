@@ -9,13 +9,15 @@ rho = 1.3;       % [kg / m³] Densidade do Ar
 Cd = 0.34;          % [] Coeficiente de arrasto aerodinamico
 
 % if t < 10
-%     theta = deg2rad(3);
+%     
 % else
 %     % Condições de operação
 %     theta = 0; % [rad] Inclinação da Via = 2º
 % end
 
-theta = 0; % [rad] Inclinação da Via = 2º
+% theta = 0; % [rad] Inclinação da Via = 2º
+
+theta = deg2rad(5);
 
 % Eq. Resistencia ao movimento
 
@@ -29,11 +31,10 @@ Rx = 0;
 
 % Resistencia aerodinamica:
 Ra = (1/2) * rho * Af * Cd * Vms.^2; % [N]
-Ra = 0;
 
 % Resistencia devido ao aclive:
-Ri = W * sin(theta) * ones(size(Vms)); % [N]
-Ri = 0;
+Ri = W * sin(theta) * sign(Vms); % * ones(size(Vms)); % [N]
+% Ri = 0;
 
 % Calculo do movimento longitudinal
 ax = (Fxt * sign(Vms) - Ra - Rx - Ri) / M;

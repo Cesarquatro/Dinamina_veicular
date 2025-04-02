@@ -2,7 +2,7 @@ close all; clc; clear
 %% 
 
 tsim = [0 500];
-V0 = 80 /3.6;
+V0 = 110 /3.6;
 Fxt = -300;
 
 
