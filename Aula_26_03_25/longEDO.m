@@ -2,8 +2,8 @@ close all; clc; clear
 %% 
 
 tsim = [0 500];
-V0 = 0 /3.6;
-Fxt = 900;
+V0 = 80 /3.6;
+Fxt = -300;
 
 
 % @ fala quais são as constantes, o testo ele considera como cte
@@ -20,3 +20,5 @@ xlabel("t [s]");
 ylabel("v [Km / h]");
 
 %legend('Ra + Rx', Location='best');
+
+dist = trapz(t, vms)

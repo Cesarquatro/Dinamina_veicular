@@ -36,6 +36,6 @@ Ri = W * sin(theta) * ones(size(Vms)); % [N]
 Ri = 0;
 
 % Calculo do movimento longitudinal
-ax = (Fxt * sign(Vms) - Ra - Rx - Ri) / M;
+ax = (Fxt * sign() - Ra - Rx - Ri) / M;
 
 end
